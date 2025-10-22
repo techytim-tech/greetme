@@ -2,7 +2,7 @@
 
 A fast, themeable terminal greeting application with support for ASCII art fonts and customizable color themes.
 
-[![CI](https://github.com/user/greetme/workflows/CI/badge.svg)](https://github.com/user/greetme/actions)
+[![CI](https://github.com/techytim-tech/greetme/workflows/CI/badge.svg)](https://github.com/techytim-tech/greetme/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -20,21 +20,21 @@ A fast, themeable terminal greeting application with support for ASCII art fonts
 ### Debian/Ubuntu
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
 sudo dpkg -i greetme_1.0.0_amd64.deb
 ```
 
 ### Fedora/RHEL/CentOS
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 sudo rpm -i greetme-1.0.0-1.x86_64.rpm
 ```
 
 ### openSUSE
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 sudo zypper install ./greetme-1.0.0-1.x86_64.rpm
 ```
 
@@ -42,7 +42,7 @@ sudo zypper install ./greetme-1.0.0-1.x86_64.rpm
 
 ```bash
 # Install from package
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
 sudo pacman -U greetme-1.0.0-1-x86_64.pkg.tar.zst
 
 # Or install from AUR (coming soon)
@@ -52,7 +52,7 @@ sudo pacman -U greetme-1.0.0-1-x86_64.pkg.tar.zst
 ### From Source
 
 ```bash
-git clone https://github.com/user/greetme.git
+git clone https://github.com/techytim-tech/greetme.git
 cd greetme
 cargo build --release
 sudo cp target/release/greetme /usr/local/bin/
