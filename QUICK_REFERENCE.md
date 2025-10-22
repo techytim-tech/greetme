@@ -300,7 +300,7 @@ greetme -t "Repository Updated!" --force
 
 - [ ] Create GitHub repository
 - [ ] `git init && git add . && git commit -m "Initial commit"`
-- [ ] `git remote add origin https://github.com/USER/greetme.git`
+- [ ] `git remote add origin https://github.com/techytim-tech/greetme.git`
 - [ ] `git push -u origin main`
 - [ ] `git tag v1.0.0 && git push origin v1.0.0`
 - [ ] Wait for CI to build packages
@@ -330,8 +330,8 @@ greetme -r
 
 - Documentation: All markdown files in repo
 - Man page: `man greetme`
-- Issues: https://github.com/USER/greetme/issues
-- Source: https://github.com/USER/greetme
+- Issues: https://github.com/techytim-tech/greetme/issues
+- Source: https://github.com/techytim-tech/greetme
 
 ---
 

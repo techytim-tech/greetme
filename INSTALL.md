@@ -20,7 +20,7 @@ This guide provides detailed installation instructions for greetme on various Li
 1. Download the latest .deb package:
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
 ```
 
 2. Install the package:
@@ -39,7 +39,7 @@ sudo apt-get install -f
 
 ```bash
 # Download and extract
-wget https://github.com/user/greetme/releases/latest/download/greetme-linux-x86_64
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-linux-x86_64
 chmod +x greetme-linux-x86_64
 sudo mv greetme-linux-x86_64 /usr/local/bin/greetme
 ```
@@ -51,7 +51,7 @@ sudo mv greetme-linux-x86_64 /usr/local/bin/greetme
 1. Download the latest RPM package:
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 ```
 
 2. Install the package:
@@ -73,7 +73,7 @@ sudo rpm -i greetme-1.0.0-1.x86_64.rpm
 1. Download the latest RPM package:
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 ```
 
 2. Install the package:
@@ -95,7 +95,7 @@ sudo dnf install ./greetme-1.0.0-1.x86_64.rpm
 1. Download the latest RPM package:
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 ```
 
 2. Install the package:
@@ -111,7 +111,7 @@ sudo zypper install ./greetme-1.0.0-1.x86_64.rpm
 1. Download the latest package:
 
 ```bash
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
 ```
 
 2. Install the package:
@@ -158,7 +158,7 @@ source $HOME/.cargo/env
 2. Clone the repository:
 
 ```bash
-git clone https://github.com/user/greetme.git
+git clone https://github.com/techytim-tech/greetme.git
 cd greetme
 ```
 
@@ -382,5 +382,5 @@ greetme -c --force
 ## Support
 
 For issues and questions:
-- GitHub Issues: https://github.com/user/greetme/issues
-- Documentation: https://github.com/user/greetme/blob/main/README.md
+- GitHub Issues: https://github.com/techytim-tech/greetme/issues
+- Documentation: https://github.com/techytim-tech/greetme/blob/main/README.md

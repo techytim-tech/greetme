@@ -151,7 +151,7 @@ Full packaging support for Arch Linux with PKGBUILD and automated build scripts.
 #### Option 1: Pre-built Package
 ```bash
 # Download from GitHub Releases
-wget https://github.com/user/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
+wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
 
 # Install with pacman
 sudo pacman -U greetme-1.0.0-1-x86_64.pkg.tar.zst
@@ -160,7 +160,7 @@ sudo pacman -U greetme-1.0.0-1-x86_64.pkg.tar.zst
 #### Option 2: Build from PKGBUILD
 ```bash
 # Clone the repository
-git clone https://github.com/user/greetme.git
+git clone https://github.com/techytim-tech/greetme.git
 cd greetme
 
 # Build the package
