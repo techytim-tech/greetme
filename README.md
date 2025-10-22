@@ -20,7 +20,7 @@ A fast, themeable terminal greeting application with support for ASCII art fonts
 ### Debian/Ubuntu
 
 ```bash
-wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
+wget https://github.com/techytim-tech/greetme/releases/download/debian-binary-release/greetme_1.0.0-1_amd64.deb
 sudo dpkg -i greetme_1.0.0_amd64.deb
 ```
 
