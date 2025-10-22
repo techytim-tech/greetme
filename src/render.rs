@@ -71,18 +71,22 @@ impl Renderer {
 
     fn render_figlet(&self, text: &str) -> Result<String> {
         // Try to load the specified font, fall back to standard
-        let font = match self.font_name.as_str() {
+        let font_result = match self.font_name.as_str() {
             "standard" => FIGfont::standard(),
-            "small" => FIGfont::from_content(include_str!("../fonts/small.flf"))
-                .unwrap_or_else(|_| FIGfont::standard()),
-            "big" => FIGfont::from_content(include_str!("../fonts/big.flf"))
-                .unwrap_or_else(|_| FIGfont::standard()),
-            "banner" => FIGfont::from_content(include_str!("../fonts/banner.flf"))
-                .unwrap_or_else(|_| FIGfont::standard()),
-            "block" => FIGfont::from_content(include_str!("../fonts/block.flf"))
-                .unwrap_or_else(|_| FIGfont::standard()),
+            "small" => FIGfont::from_content(include_str!("../fonts/small.flf")),
+            "big" => FIGfont::from_content(include_str!("../fonts/big.flf")),
+            "banner" => FIGfont::from_content(include_str!("../fonts/banner.flf")),
+            "block" => FIGfont::from_content(include_str!("../fonts/block.flf")),
             _ => FIGfont::standard(),
         };
+
+        let font = font_result.unwrap_or_else(|_| {
+            // If all else fails, try to create a minimal font
+            FIGfont::from_content("").unwrap_or_else(|_| {
+                // This should never happen, but if it does, we'll panic
+                panic!("Failed to load any font")
+            })
+        });
 
         let figure = font.convert(text);
         match figure {
