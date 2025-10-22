@@ -112,14 +112,14 @@ mod tests {
     #[test]
     fn test_renderer_creation() {
         let theme = create_test_theme();
-        let renderer = Renderer::new(theme, "standard");
+        let renderer = Renderer::new(theme, "standard", 1.0);
         assert_eq!(renderer.font_name, "standard");
     }
 
     #[test]
     fn test_render_figlet() {
         let theme = create_test_theme();
-        let renderer = Renderer::new(theme, "standard");
+        let renderer = Renderer::new(theme, "standard", 1.0);
         let result = renderer.render_figlet("TEST");
         assert!(result.is_ok());
         let output = result.unwrap();
