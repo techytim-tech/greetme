@@ -1,0 +1,9 @@
+# Solarized Dark theme - precision colors for machines and people
+name = "solarized"
+description = "Solarized Dark terminal palette"
+foreground = "#839496"
+background = "#002b36"
+accent = "#268bd2"
+strong = "#dc322f"
+dim = "#586e75"
+ascii_art_style = "normal"

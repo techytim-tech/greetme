@@ -1,0 +1,10 @@
+# greetme configuration file
+# Location: ~/.config/greetme/config.toml (or $XDG_CONFIG_HOME/greetme/config.toml)
+
+version = "1.0"
+default_text = "Hello, world!"
+default_theme = "onedark"
+default_font = "standard"
+font_size = 1.0
+last_shown = "Hello, world!"
+last_updated = "2025-10-22T10:00:00Z"

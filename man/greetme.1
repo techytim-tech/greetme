@@ -1,0 +1,152 @@
+.TH GREETME 1 "October 2025" "greetme 1.0.0" "User Commands"
+.SH NAME
+greetme \- a fast, themeable terminal greeting application
+.SH SYNOPSIS
+.B greetme
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.B greetme
+is a terminal greeting application that displays customizable ASCII art text with colorful themes. It supports multiple themes, fonts, and follows XDG Base Directory specification for configuration.
+.SH OPTIONS
+.TP
+.BR \-t ", " \-\-text " \fITEXT\fR"
+Display the specified text as a themed greeting and optionally store it.
+.TP
+.BR \-r ", " \-\-read
+Read and display the stored greeting from configuration.
+.TP
+.BR \-c ", " \-\-create\-config
+Create default configuration directory with themes and fonts.
+.TP
+.BR \-s ", " \-\-set\-theme " \fITHEME\fR"
+Set the active theme. Theme must exist in the themes directory.
+.TP
+.BR \-\-list\-themes
+List all available themes and indicate which one is active.
+.TP
+.BR \-\-font " \fIFONT\fR"
+Use the specified font for rendering (standard, small, big, banner, block).
+.TP
+.BR \-\-size " \fISIZE\fR"
+Set font size multiplier. Range: 0.1 to 10.0. Default: 1.0. Values above 1.0 make text larger, below 1.0 make it smaller.
+.TP
+.BR \-\-save
+Save the current text, theme, font, and size as defaults in the configuration.
+.TP
+.BR \-\-preview\-theme " \fITHEME\fR"
+Display a preview of the specified theme.
+.TP
+.BR \-\-force
+Force output even if stdout is not a terminal.
+.TP
+.BR \-v ", " \-\-verbose
+Enable verbose output for debugging.
+.TP
+.BR \-h ", " \-\-help
+Display help information.
+.TP
+.BR \-V ", " \-\-version
+Display version information.
+.SH CONFIGURATION
+Configuration is stored in
+.I ~/.config/greetme/config.toml
+(or
+.IR $XDG_CONFIG_HOME/greetme/config.toml ).
+The configuration file is in TOML format and contains:
+.TP
+.B version
+Configuration file version
+.TP
+.B default_text
+Default greeting text
+.TP
+.B default_theme
+Active theme name
+.TP
+.B default_font
+Active font name
+.TP
+.B font_size
+Font size multiplier (1.0 = normal, 2.0 = double size)
+.TP
+.B last_shown
+Last displayed greeting
+.TP
+.B last_updated
+Timestamp of last configuration update
+.SH THEMES
+Themes are stored in
+.I ~/.config/greetme/themes/
+as TOML files. Each theme defines colors and styling options.
+.PP
+Built-in themes: onedark, solarized, dracula, gruvbox, monokai, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+.SH FILES
+.TP
+.I ~/.config/greetme/config.toml
+Main configuration file
+.TP
+.I ~/.config/greetme/themes/
+Theme files directory
+.TP
+.I ~/.config/greetme/fonts/
+Font files directory
+.TP
+.I /usr/share/greetme/
+System-wide default themes and fonts
+.SH EXAMPLES
+Create default configuration:
+.PP
+.nf
+.RS
+greetme \-c
+.RE
+.fi
+.PP
+Display a greeting:
+.PP
+.nf
+.RS
+greetme \-t "Welcome back!"
+.RE
+.fi
+.PP
+Set a theme and save with custom size:
+.PP
+.nf
+.RS
+greetme \-\-set\-theme catppuccin-mocha
+greetme \-t "Hello" \-\-size 2.0 \-\-save
+.RE
+.fi
+.PP
+Read stored greeting:
+.PP
+.nf
+.RS
+greetme \-r
+.RE
+.fi
+.SH EXIT STATUS
+.TP
+.B 0
+Success
+.TP
+.B non-zero
+Error occurred (missing config, unknown theme, write failure, etc.)
+.SH ENVIRONMENT
+.TP
+.B XDG_CONFIG_HOME
+Base directory for user configuration (defaults to ~/.config)
+.SH AUTHOR
+Written by greetme contributors.
+.SH REPORTING BUGS
+Report bugs at: https://github.com/user/greetme/issues
+.SH COPYRIGHT
+Copyright \(co 2025 greetme contributors.
+License MIT: <https://opensource.org/licenses/MIT>
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+.BR figlet (6),
+.BR toilet (1)

@@ -1,0 +1,9 @@
+# Catppuccin Mocha - Soothing pastel theme for the high-spirited!
+name = "catppuccin-mocha"
+description = "Catppuccin Mocha (dark theme)"
+foreground = "#cdd6f4"
+background = "#1e1e2e"
+accent = "#89b4fa"
+strong = "#f38ba8"
+dim = "#6c7086"
+ascii_art_style = "bold"

@@ -1,0 +1,9 @@
+# Dracula theme - dark theme with vibrant colors
+name = "dracula"
+description = "Dracula terminal palette"
+foreground = "#f8f8f2"
+background = "#282a36"
+accent = "#8be9fd"
+strong = "#ff79c6"
+dim = "#6272a4"
+ascii_art_style = "bold"

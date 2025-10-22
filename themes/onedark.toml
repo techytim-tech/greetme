@@ -1,0 +1,9 @@
+# OneDark theme - popular dark theme inspired by Atom
+name = "onedark"
+description = "One Dark terminal palette"
+foreground = "#abb2bf"
+background = "#282c34"
+accent = "#61afef"
+strong = "#e06c75"
+dim = "#5c6370"
+ascii_art_style = "bold"

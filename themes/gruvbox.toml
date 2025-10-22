@@ -1,0 +1,9 @@
+# Gruvbox theme - retro groove color scheme
+name = "gruvbox"
+description = "Gruvbox Dark terminal palette"
+foreground = "#ebdbb2"
+background = "#282828"
+accent = "#83a598"
+strong = "#fb4934"
+dim = "#928374"
+ascii_art_style = "bold"

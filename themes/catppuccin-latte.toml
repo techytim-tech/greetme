@@ -1,0 +1,9 @@
+# Catppuccin Latte - Soothing pastel theme for the high-spirited!
+name = "catppuccin-latte"
+description = "Catppuccin Latte (light theme)"
+foreground = "#4c4f69"
+background = "#eff1f5"
+accent = "#1e66f5"
+strong = "#d20f39"
+dim = "#9ca0b0"
+ascii_art_style = "bold"

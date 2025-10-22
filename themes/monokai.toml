@@ -1,0 +1,9 @@
+# Monokai theme - smooth, pleasant colors
+name = "monokai"
+description = "Monokai terminal palette"
+foreground = "#f8f8f2"
+background = "#272822"
+accent = "#66d9ef"
+strong = "#f92672"
+dim = "#75715e"
+ascii_art_style = "bold"

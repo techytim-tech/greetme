@@ -1,0 +1,9 @@
+# Catppuccin Frappé - Soothing pastel theme for the high-spirited!
+name = "catppuccin-frappe"
+description = "Catppuccin Frappé (dark theme)"
+foreground = "#c6d0f5"
+background = "#303446"
+accent = "#8caaee"
+strong = "#e78284"
+dim = "#737994"
+ascii_art_style = "bold"
