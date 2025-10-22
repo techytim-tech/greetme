@@ -1,0 +1,51 @@
+[package]
+name = "greetme"
+version = "1.0.0"
+edition = "2021"
+authors = ["greetme contributors"]
+license = "MIT"
+description = "A fast, themeable terminal greeting application"
+homepage = "https://github.com/user/greetme"
+repository = "https://github.com/user/greetme"
+readme = "README.md"
+keywords = ["cli", "terminal", "greeting", "figlet", "theme"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+dirs = "5.0"
+colored = "2.1"
+figlet-rs = "0.1"
+
+[dev-dependencies]
+tempfile = "3.10"
+assert_cmd = "2.0"
+predicates = "3.1"
+
+[package.metadata.deb]
+maintainer = "greetme contributors <greetme@example.com>"
+copyright = "2025, greetme contributors"
+license-file = ["LICENSE", "4"]
+extended-description = """\
+greetme is a fast, POSIX-compliant terminal greeting application \
+with support for themes, ASCII art fonts, and XDG configuration."""
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/greetme", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/greetme/", "644"],
+    ["LICENSE", "usr/share/doc/greetme/", "644"],
+    ["man/greetme.1", "usr/share/man/man1/greetme.1.gz", "644"],
+    ["themes/*", "usr/share/greetme/themes/", "644"],
+    ["fonts/*", "usr/share/greetme/fonts/", "644"],
+    ["examples/config.toml", "usr/share/greetme/examples/", "644"],
+]
+
+[[bin]]
+name = "greetme"
+path = "src/main.rs"
