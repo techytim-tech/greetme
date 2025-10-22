@@ -2,7 +2,7 @@ use anyhow::{Context, Result};
 use colored::Color;
 use serde::{Deserialize, Serialize};
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Theme {
@@ -131,15 +131,15 @@ mod tests {
     #[test]
     fn test_theme_parsing() {
         let toml = r#"
-            name = "test"
-            description = "Test theme"
-            foreground = "#ffffff"
-            background = "#000000"
-            accent = "#ff0000"
-            strong = "#00ff00"
-            dim = "#0000ff"
-            ascii_art_style = "bold"
-        "#;
+name = "test"
+description = "Test theme"
+foreground = "#ffffff"
+background = "#000000"
+accent = "#ff0000"
+strong = "#00ff00"
+dim = "#0000ff"
+ascii_art_style = "bold"
+"#;
 
         let theme: Theme = toml::from_str(toml).unwrap();
         assert_eq!(theme.name, "test");

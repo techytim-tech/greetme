@@ -2,7 +2,7 @@ use anyhow::{anyhow, Context, Result};
 use clap::Parser;
 use std::io::{self, IsTerminal};
 
-use crate::config::{Config, ConfigManager};
+use crate::config::ConfigManager;
 use crate::render::Renderer;
 use crate::themes::ThemeManager;
 

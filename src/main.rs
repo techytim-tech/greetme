@@ -17,4 +17,3 @@ fn run() -> Result<()> {
     let args = cli::Args::parse();
     cli::execute(args)
 }
-

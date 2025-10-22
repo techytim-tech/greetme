@@ -74,15 +74,15 @@ impl Renderer {
         let font = match self.font_name.as_str() {
             "standard" => FIGfont::standard(),
             "small" => FIGfont::from_content(include_str!("../fonts/small.flf"))
-                .or_else(|_| FIGfont::standard()),
+                .unwrap_or_else(|_| FIGfont::standard()),
             "big" => FIGfont::from_content(include_str!("../fonts/big.flf"))
-                .or_else(|_| FIGfont::standard()),
+                .unwrap_or_else(|_| FIGfont::standard()),
             "banner" => FIGfont::from_content(include_str!("../fonts/banner.flf"))
-                .or_else(|_| FIGfont::standard()),
+                .unwrap_or_else(|_| FIGfont::standard()),
             "block" => FIGfont::from_content(include_str!("../fonts/block.flf"))
-                .or_else(|_| FIGfont::standard()),
+                .unwrap_or_else(|_| FIGfont::standard()),
             _ => FIGfont::standard(),
-        }?;
+        };
 
         let figure = font.convert(text);
         match figure {
