@@ -1,6 +1,8 @@
 # greetme
 
-A fast, themeable terminal greeting application with support for ASCII art fonts and customizable color themes.
+> 🚧 **A Work in Progress** - Created by TechyTim with AI assistance
+
+A modern, feature-rich terminal greeting application with advanced theming, animations, and customization options.
 
 [![CI](https://github.com/techytim-tech/greetme/workflows/CI/badge.svg)](https://github.com/techytim-tech/greetme/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

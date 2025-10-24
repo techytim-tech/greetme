@@ -7,10 +7,11 @@ This guide provides detailed installation instructions for greetme on various Li
 - [Debian/Ubuntu](#debianubuntu)
 - [Fedora](#fedora)
 - [CentOS/RHEL](#centosrhel)
-- [openSUSE](#opensuse)
+- [openSUSE Tumbleweed/Leap](#opensuse)
 - [Arch Linux](#arch-linux)
 - [From Source](#from-source)
 - [Verification](#verification)
+- [Troubleshooting](#troubleshooting)
 - [Uninstallation](#uninstallation)
 
 ## Debian/Ubuntu
@@ -20,7 +21,7 @@ This guide provides detailed installation instructions for greetme on various Li
 1. Download the latest .deb package:
 
 ```bash
-wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme_1.0.0_amd64.deb
+wget https://github.com/techytim-tech/greetme/releases/download/debian-binary-release/greetme_1.0.0-1_amd64.deb
 ```
 
 2. Install the package:
@@ -90,34 +91,84 @@ sudo dnf install ./greetme-1.0.0-1.x86_64.rpm
 
 ## openSUSE
 
-### Using RPM Package
+### Using RPM Package (Tumbleweed or Leap)
 
-1. Download the latest RPM package:
+1. Install build dependencies first:
+
+```bash
+sudo zypper install -y patterns-devel-base-devel_basis
+```
+
+2. Download the latest RPM package:
 
 ```bash
 wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1.x86_64.rpm
 ```
 
-2. Install the package:
+3. Install the package:
 
 ```bash
-sudo zypper install ./greetme-1.0.0-1.x86_64.rpm
+sudo zypper install --allow-unsigned-rpm ./greetme-1.0.0-1.x86_64.rpm
+```
+
+### Building from Source on openSUSE
+
+1. Install required dependencies:
+
+```bash
+# For both Tumbleweed and Leap
+sudo zypper install -y patterns-devel-base-devel_basis git cargo
+```
+
+2. Clone and build:
+
+```bash
+git clone https://github.com/techytim-tech/greetme.git
+cd greetme
+./setup.sh  # This will automatically detect openSUSE and install requirements
 ```
 
 ## Arch Linux
 
 ### Using Package
 
-1. Download the latest package:
+1. Install build dependencies:
+
+```bash
+sudo pacman -S --needed base-devel git cargo archlinux-keyring
+```
+
+2. Download the latest package:
 
 ```bash
 wget https://github.com/techytim-tech/greetme/releases/latest/download/greetme-1.0.0-1-x86_64.pkg.tar.zst
 ```
 
-2. Install the package:
+3. Install the package:
 
 ```bash
 sudo pacman -U greetme-1.0.0-1-x86_64.pkg.tar.zst
+```
+
+### Building from Source on Arch Linux
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/techytim-tech/greetme.git
+cd greetme
+```
+
+2. Build using makepkg:
+
+```bash
+makepkg -si
+```
+
+Or use the setup script:
+
+```bash
+./setup.sh  # This will automatically detect Arch and install requirements
 ```
 
 ### From AUR (Coming Soon)
@@ -325,6 +376,39 @@ rm -rf ~/.config/greetme
 ```
 
 ## Troubleshooting
+
+### Arch Linux Package Creation Issues
+
+If you're having trouble creating the .pkg.tar.zst file:
+
+1. Make sure you have the required dependencies:
+```bash
+sudo pacman -S --needed base-devel git cargo archlinux-keyring
+```
+
+2. Clean any previous build attempts:
+```bash
+rm -rf pkg/ src/ *.pkg.tar.zst
+```
+
+3. Build with verbose output:
+```bash
+makepkg -si --noconfirm V
+```
+
+### openSUSE Package Installation Issues
+
+If you encounter signature verification errors:
+
+1. For manual installation, use:
+```bash
+sudo zypper install --allow-unsigned-rpm ./greetme-1.0.0-1.x86_64.rpm
+```
+
+2. For build failures, ensure all dependencies are installed:
+```bash
+sudo zypper install -y patterns-devel-base-devel_basis git cargo
+```
 
 ### Command not found
 
